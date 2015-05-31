@@ -1,13 +1,12 @@
 'use strict';
 var arrify = require('arrify');
+var numSort = require('num-sort');
 
 module.exports = function (str, i) {
 	var ret = [];
 	var lastIndex = 0;
 
-	arrify(i).sort(function (a, b) {
-		return a - b;
-	}).forEach(function (el, i) {
+	arrify(i).sort(numSort.asc).forEach(function (el, i) {
 		el++;
 		ret.push(str.slice(lastIndex, el));
 		lastIndex = el;

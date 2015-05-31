@@ -30,7 +30,8 @@
     "indices"
   ],
   "dependencies": {
-    "arrify": "^1.0.0"
+    "arrify": "^1.0.0",
+    "num-sort": "^1.0.0"
   },
   "devDependencies": {
     "ava": "0.0.4"
