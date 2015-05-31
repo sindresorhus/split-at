@@ -1,6 +1,6 @@
 {
   "name": "split-at",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Split a string at one or more indices",
   "license": "MIT",
   "repository": "sindresorhus/split-at",
