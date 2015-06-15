@@ -20,12 +20,15 @@ splitAt('unicorn', 2);
 
 splitAt('unicorn&rainbow', [6, 7]);
 //=> ['unicorn', '&', 'rainbow']
+
+splitAt('unicorn&rainbow', 7, {remove: true});
+//=> ['unicorn', 'rainbow']
 ```
 
 
 ## API
 
-### splitAt(input, index)
+### splitAt(input, index, [options])
 
 #### input
 
@@ -38,6 +41,19 @@ String to be split.
 Type: `number`, `array` of `number`
 
 One or more indices.
+
+#### options
+
+Type: `object`
+
+##### remove
+
+Type: `boolean`  
+Default: `false`
+
+Remove the chosen indices.
+
+Similar to the default `String#split` behaviour.
 
 
 ## License

@@ -2,13 +2,15 @@
 var arrify = require('arrify');
 var numSort = require('num-sort');
 
-module.exports = function (str, i) {
+module.exports = function (str, i, opts) {
+	opts = opts || {};
+
 	var ret = [];
 	var lastIndex = 0;
 
-	arrify(i).sort(numSort.asc).forEach(function (el, i) {
+	arrify(i).sort(numSort.asc).forEach(function (el) {
 		el++;
-		ret.push(str.slice(lastIndex, el));
+		ret.push(str.slice(lastIndex, opts.remove ? el - 1 : el));
 		lastIndex = el;
 	});
 
