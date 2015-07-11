@@ -30,6 +30,7 @@
     "indices"
   ],
   "dependencies": {
+    "array-uniq": "^1.0.2",
     "arrify": "^1.0.0",
     "num-sort": "^1.0.0"
   },
