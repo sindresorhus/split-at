@@ -11,7 +11,6 @@ module.exports = function (str, i, opts) {
 
 	arrayUniq(arrify(i).map(function (el) {
 		var val = el < 0 ? ((str.length - 1) - (el * -1)) : el;
-		
 		return val < 0 ? (val * -1) : val;
 	}).sort(numSort.asc)).forEach(function (el) {
 		el++;

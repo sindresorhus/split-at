@@ -19,14 +19,11 @@ test('splitAt()', function (t) {
 
 	assert.deepEqual(splitAt('unicorn', 5), ['unicor', 'n']);
 	assert.deepEqual(splitAt('unicorn', 6), ['unicorn']);
-
 	assert.deepEqual(splitAt('unicorn', -1), ['unicor', 'n']);
-
 	assert.deepEqual(splitAt('unicorn', 100), ['unicorn']);
 	assert.deepEqual(splitAt('unicorn', -100), ['unicorn']);
+	assert.deepEqual(splitAt('unicorn', [-4, 2]), ['uni', 'corn']);
 
-	assert.deepEqual(splitAt('unicorn', [-4, 2]), [ 'uni', 'corn' ]);
-	
 	t.end();
 });
 
