@@ -18,6 +18,9 @@ var splitAt = require('split-at');
 splitAt('unicorn', 2);
 //=> ['uni', 'corn']
 
+splitAt('unicorn', -2);
+//=> ['unico', 'rn']
+
 splitAt('unicorn&rainbow', [6, 7]);
 //=> ['unicorn', '&', 'rainbow']
 
@@ -40,7 +43,7 @@ String to be split.
 
 Type: `number`, `array` of `number`
 
-One or more indices.
+One or more indices. A negative index is a 1-based position from the end of the string. For example, -1 is the index of the last place in the string. Duplicate indices are removed from the `index` array. A negative index and positive index that refer to the same position in the string are treated as duplicates.
 
 #### options
 
