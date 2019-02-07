@@ -59,6 +59,11 @@ Remove the chosen indices.
 Similar to the default `String#split` behaviour.
 
 
+## Related
+
+- [split-on-first](https://github.com/sindresorhus/split-on-first) - Split a string on the first occurrence of a given separator
+
+
 ## License
 
 MIT © [Sindre Sorhus](http://sindresorhus.com)
