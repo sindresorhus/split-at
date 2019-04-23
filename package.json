@@ -24,7 +24,6 @@
 		"cut",
 		"at",
 		"string",
-		"str",
 		"text",
 		"index",
 		"indexes",
@@ -33,7 +32,7 @@
 	"dependencies": {
 		"array-uniq": "^2.1.0",
 		"arrify": "^2.0.1",
-		"num-sort": "^1.0.0"
+		"num-sort": "^2.0.0"
 	},
 	"devDependencies": {
 		"ava": "^1.4.1",
