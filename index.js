@@ -13,7 +13,7 @@ module.exports = (string, index, options = {}) => {
 				const value = element < 0 ? string.length - 1 - (element * -1) : element;
 				return value < 0 ? value * -1 : value;
 			})
-			.sort(numSort.asc)
+			.sort(numSort.ascending)
 	).forEach(element => {
 		element++;
 		result.push(
