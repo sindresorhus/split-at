@@ -1,26 +1,30 @@
 'use strict';
-var arrify = require('arrify');
-var numSort = require('num-sort');
-var arrayUniq = require('array-uniq');
+const arrify = require('arrify');
+const numSort = require('num-sort');
+const arrayUniq = require('array-uniq');
 
-module.exports = function (str, i, opts) {
-	opts = opts || {};
+module.exports = (string, index, options = {}) => {
+	const result = [];
+	let lastIndex = 0;
 
-	var ret = [];
-	var lastIndex = 0;
-
-	arrayUniq(arrify(i).map(function (el) {
-		var val = el < 0 ? ((str.length - 1) - (el * -1)) : el;
-		return val < 0 ? (val * -1) : val;
-	}).sort(numSort.asc)).forEach(function (el) {
-		el++;
-		ret.push(str.slice(lastIndex, opts.remove ? el - 1 : el));
-		lastIndex = el;
+	arrayUniq(
+		arrify(index)
+			.map(element => {
+				const value = element < 0 ? string.length - 1 - (element * -1) : element;
+				return value < 0 ? value * -1 : value;
+			})
+			.sort(numSort.ascending)
+	).forEach(element => {
+		element++;
+		result.push(
+			string.slice(lastIndex, options.remove ? element - 1 : element)
+		);
+		lastIndex = element;
 	});
 
-	if (lastIndex < str.length) {
-		ret.push(str.slice(lastIndex));
+	if (lastIndex < string.length) {
+		result.push(string.slice(lastIndex));
 	}
 
-	return ret;
+	return result;
 };

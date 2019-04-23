@@ -1,40 +1,42 @@
 {
-  "name": "split-at",
-  "version": "1.2.0",
-  "description": "Split a string at one or more indices",
-  "license": "MIT",
-  "repository": "sindresorhus/split-at",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "node test.js"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "split",
-    "cut",
-    "at",
-    "string",
-    "str",
-    "text",
-    "index",
-    "indexes",
-    "indices"
-  ],
-  "dependencies": {
-    "array-uniq": "^1.0.2",
-    "arrify": "^1.0.0",
-    "num-sort": "^1.0.0"
-  },
-  "devDependencies": {
-    "ava": "0.0.4"
-  }
+	"name": "split-at",
+	"version": "1.2.0",
+	"description": "Split a string at one or more indices",
+	"license": "MIT",
+	"repository": "sindresorhus/split-at",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava && tsd"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"keywords": [
+		"split",
+		"cut",
+		"at",
+		"string",
+		"text",
+		"index",
+		"indexes",
+		"indices"
+	],
+	"dependencies": {
+		"array-uniq": "^2.1.0",
+		"arrify": "^2.0.1",
+		"num-sort": "^2.0.0"
+	},
+	"devDependencies": {
+		"ava": "^1.4.1",
+		"tsd": "^0.7.2",
+		"xo": "^0.24.0"
+	}
 }
