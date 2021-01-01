@@ -1,4 +1,4 @@
-# split-at [![Build Status](https://travis-ci.org/sindresorhus/split-at.svg?branch=master)](https://travis-ci.org/sindresorhus/split-at)
+# split-at
 
 > Split a string at one or more indices
 
