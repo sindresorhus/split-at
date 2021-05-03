@@ -1,30 +1,33 @@
-'use strict';
-const arrify = require('arrify');
-const numSort = require('num-sort');
-const arrayUniq = require('array-uniq');
+import arrify from 'arrify';
+import {numberSortAscending} from 'num-sort';
+import arrayUniq from 'array-uniq';
 
-module.exports = (string, index, options = {}) => {
+export default function splitAt(string, index, {remove} = {}) {
 	const result = [];
 	let lastIndex = 0;
 
-	arrayUniq(
+	const indices = arrayUniq(
 		arrify(index)
 			.map(element => {
 				const value = element < 0 ? string.length - 1 - (element * -1) : element;
 				return value < 0 ? value * -1 : value;
 			})
-			.sort(numSort.ascending)
-	).forEach(element => {
-		element++;
+			.sort(numberSortAscending)
+	);
+
+	for (let index of indices) {
+		index++;
+
 		result.push(
-			string.slice(lastIndex, options.remove ? element - 1 : element)
+			string.slice(lastIndex, remove ? index - 1 : index)
 		);
-		lastIndex = element;
-	});
+
+		lastIndex = index;
+	}
 
 	if (lastIndex < string.length) {
 		result.push(string.slice(lastIndex));
 	}
 
 	return result;
-};
+}

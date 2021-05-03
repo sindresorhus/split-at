@@ -1,14 +1,12 @@
-declare namespace splitAt {
-	interface Options {
-		/**
-		Remove the chosen indices.
+export interface Options {
+	/**
+	Remove the chosen indices.
 
-		Similar to the default `String#split` behaviour.
+	Similar to the default `String#split` behaviour.
 
-		@default false
-		*/
-		readonly remove?: boolean;
-	}
+	@default false
+	*/
+	readonly remove?: boolean;
 }
 
 /**
@@ -19,7 +17,7 @@ Split a string at one or more indices.
 
 @example
 ```
-import splitAt = require('split-at');
+import splitAt from 'split-at';
 
 splitAt('unicorn', 2);
 //=> ['uni', 'corn']
@@ -34,10 +32,8 @@ splitAt('unicorn&rainbow', 7, {remove: true});
 //=> ['unicorn', 'rainbow']
 ```
 */
-declare function splitAt(
+export default function splitAt(
 	string: string,
 	index: number | readonly number[],
-	options?: splitAt.Options
+	options?: Options
 ): string[];
-
-export = splitAt;

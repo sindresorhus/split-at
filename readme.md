@@ -2,18 +2,16 @@
 
 > Split a string at one or more indices
 
-
 ## Install
 
 ```
 $ npm install split-at
 ```
 
-
 ## Usage
 
 ```js
-const splitAt = require('split-at');
+import splitAt from 'split-at';
 
 splitAt('unicorn', 2);
 //=> ['uni', 'corn']
@@ -28,10 +26,9 @@ splitAt('unicorn&rainbow', 7, {remove: true});
 //=> ['unicorn', 'rainbow']
 ```
 
-
 ## API
 
-### splitAt(string, index, [options])
+### splitAt(string, index, options?)
 
 #### string
 
@@ -51,19 +48,13 @@ Type: `object`
 
 ##### remove
 
-Type: `boolean`
+Type: `boolean`\
 Default: `false`
 
 Remove the chosen indices.
 
 Similar to the default `String#split` behaviour.
 
-
 ## Related
 
 - [split-on-first](https://github.com/sindresorhus/split-on-first) - Split a string on the first occurrence of a given separator
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

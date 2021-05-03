@@ -1,5 +1,5 @@
 import test from 'ava';
-import splitAt from '.';
+import splitAt from './index.js';
 
 test('splitAt()', t => {
 	t.deepEqual(splitAt('unicorn', 2), ['uni', 'corn']);
